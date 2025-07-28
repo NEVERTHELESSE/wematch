@@ -1,11 +1,15 @@
 import Images from "../../components/Images";
 import type { singleInterface } from "../../interface/single";
-import { singles } from "../discover/single";
 
 interface propsInterface {
-  setSelectedUser: any;
+  setSelectedUser: void;
   selected: singleInterface;
-  allChats: any;
+  allChats: {
+    profilePics: string;
+  }[];
+}
+interface chatInterface {
+  profilePics: string;
 }
 
 export default function ChatLeftSideBar({
@@ -21,7 +25,7 @@ export default function ChatLeftSideBar({
       <h3 className="text-3xl m-2 font-bold p-2">Chats</h3>
       <a href="#289"></a>
       <section className="overflow-y-scroll h-full">
-        {allChats.map((single, index) => (
+        {allChats.map((single: chatInterface, index: number) => (
           <div
             onClick={() => changeChatUser(single)}
             key={index}
