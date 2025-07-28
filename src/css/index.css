@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background: #ebd3d3;
+}
+
+.cover {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: #00000089;
+  backdrop-filter: blur(10px);
+}
+
+input[type="radio"] {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 10px;
+}
+
+#bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* backgroundRepeat: "no-repeat",
+                backgroundSize: "cover", */
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
